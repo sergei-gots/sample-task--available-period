@@ -1,7 +1,7 @@
 REST for HTTP GET("http[s]://localhost:8080/available-period") returns JSON with data according to the bizarre task specification (see README.md)
 
 <h2>Requirements</h2>:
-Tp develop REST for calculating the period of для расчета периода отчетных дат GET /available-period
+To develop REST for calculating the period of для расчета периода отчетных дат GET /available-period
 Must handle the header "session-token"
 Must return JSON-object with the 3 string keys and string arrays with the values.
 <br>
@@ -27,10 +27,10 @@ Test will be passed in 10 years in the future too.
 <br><br>
 Logic specification
 <br>
-<li>1. For calculating values for params year_1, year_2, year_3 take off with the current calendar year. If there is 2023 now, then we should return 3 of years going before: 2022, 2021 and 2020.
-   Exception! 31 december 2023 will make 2023 available, and 2020 should disappear (i.e. if there is 31 december 2023 then show 2023, 2022, 2021).  In 2024, кроме 31 december 2024, we return values for 2023, 2022 and 2021 годы, etc. as it is the same for the next years.
+<li>1. Calculating values for params year_1, year_2, year_3 is based on the value of current calendar year. If there is 2023 now, then we return 3 of years going before: 2022, 2021 and 2020.
+   Exception! 31 december 2023 will make 2023 available, and 2020 should disappear (i.e. if there is 31 december 2023 then show 2023, 2022, 2021).  In 2024, besides 31 december 2024, we return values for 2023, 2022 and 2021 годы, etc. as it is the same for the next years.
 </li>
-<li>2. For calculating values for params of monthDate take off with the values of params  year_1, year_2, year_3.
+<li>2. Calculating values for params of monthDate is based on the values of params year_1, year_2, year_3.
    E.g., today is 27 october 2023, year_1 == 2022, year_2 == 2021, year_3 == 2020, then report dates monthDate must be as shown below:
    <br>
    <br>
