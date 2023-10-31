@@ -1,13 +1,12 @@
 REST for HTTP GET("http[s]://localhost:8080/available-period") returns JSON with data according to the bizarre task specification (see README.md)
 
-<h2>Requirements</h2>:
-To develop REST for calculating the period of для расчета периода отчетных дат GET /available-period
+<h2>Requirements</h2>
+To develop REST App for calculating the period of reported dates GET /available-period.
 Must handle the header "session-token"
 Must return JSON-object with the 3 string keys and string arrays with the values.
 <br>
 Result example:
 <code>
-
 {
 
 "2022":["31 декабря 2022", "01 января 2023", "01 февраля 2023", "01 марта 2023", "01 апреля 2023", "01 мая 2023", "01 июня 2023", "01 июля 2023", "01 августа 2023", "01 сентября 2023", "01 октября 2023"],
