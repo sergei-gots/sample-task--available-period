@@ -1,4 +1,4 @@
-REST for HTTP GET("/available-period") returns JSON with data according to the bizarre task specification (see README.md)
+REST for HTTP GET("http[s]://localhost:8080/available-period") returns JSON with data according to the bizarre task specification (see README.md)
 
 <h2>Requirements</h2>:
 Tp develop REST for calculating the period of для расчета периода отчетных дат GET /available-period
