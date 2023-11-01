@@ -1,10 +1,10 @@
 REST for HTTP GET("http[s]://localhost:8080/available-period") returns JSON with data according to the bizarre task specification (see README.md)
 
 <h2>Requirements</h2>
-<br>To develop REST App for calculating the period of reported dates GET /available-period.
-<br>The app must accept the "session-token" placed in the header
-<br>The app  return JSON-object with the 3 string keys and string arrays with the values.
-<br>
+<li>To develop REST App for calculating the period of reported dates GET /available-period.
+<li>The app must accept the "session-token" placed in the header
+<li>The app  return JSON-object with the 3 string keys and string arrays with the values.
+<br><br>
 Result example:
 <code>
 {
