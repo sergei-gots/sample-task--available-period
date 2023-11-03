@@ -1,11 +1,9 @@
 package org.example;
 
 import org.example.dto.AvailablePeriodDto;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.Instant;
 
 
 @RestController
@@ -18,9 +16,8 @@ public class AvailablePeriodController {
     }
 
     @GetMapping()
-    @ResponseStatus(HttpStatus.OK)
-    public AvailablePeriodDto getAvailablePeriod() {
-        return availablePeriodService.getAvailablePeriod();
+    public AvailablePeriodDto getAvailablePeriod(@RequestHeader("session-token") String sessionToken) {
+        return availablePeriodService.getAvailablePeriod(Instant.now());
     }
 
 

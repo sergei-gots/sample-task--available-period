@@ -1,0 +1,6 @@
+### BAD_REQUEST/400: There is no 'session-token' within Http Headers
+GET http://localhost:8080/available-period
+
+### OK/200: There is a 'session-token' within Http Headers
+GET http://localhost:8080/available-period
+session-token: my-session-token
