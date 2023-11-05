@@ -25,6 +25,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Clock;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Objects;
 
@@ -54,10 +55,10 @@ class HttpRequestIntegrationTest {
         ZoneId utc = ZoneId.of("UTC");
         Clock clock = Clock.fixed(Instant.parse(strDate + "T00:00:00Z"), utc);
 
-        new MockUp<Instant>() {
+        new MockUp<LocalDate>() {
             @Mock
-            public Instant now() {
-                return Instant.now(clock);
+            public LocalDate now() {
+                return LocalDate.now(clock);
             }
         };
         this.mockMvc

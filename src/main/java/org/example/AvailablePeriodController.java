@@ -3,9 +3,6 @@ package org.example;
 import org.example.dto.AvailablePeriodDto;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Instant;
-
-
 @RestController
 @RequestMapping("/available-period")
 public class AvailablePeriodController {
@@ -17,7 +14,7 @@ public class AvailablePeriodController {
 
     @GetMapping()
     public AvailablePeriodDto getAvailablePeriod(@RequestHeader("session-token") String sessionToken) {
-        return availablePeriodService.getAvailablePeriod(Instant.now());
+        return availablePeriodService.getAvailablePeriod();
     }
 
 

@@ -2,10 +2,6 @@ package org.example.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneId;
-
 public class AvailablePeriodDto {
     @JsonProperty("Year_1")
     private YearDto year1;
@@ -14,13 +10,16 @@ public class AvailablePeriodDto {
     @JsonProperty("Year_3")
     private YearDto year3;
 
-    public AvailablePeriodDto(Instant date) {
-        LocalDate localDate = LocalDate.ofInstant(date, ZoneId.of("UTC"));
-        year1 = new YearDto(localDate, YearDto.YearIndex.YEAR_1);
-        year2 = new YearDto(localDate, YearDto.YearIndex.YEAR_2);
-        year3 = new YearDto(localDate, YearDto.YearIndex.YEAR_3);
+    public AvailablePeriodDto() {
     }
 
+    public void setYear1(YearDto year1) {
+        this.year1 = year1;
+    }
+    public void setYear2(YearDto year2) {
+        this.year2 = year2;
+    }
+    public void setYear3(YearDto year3) { this.year3 = year3; }
     public YearDto getYear1() {
         return year1;
     }
